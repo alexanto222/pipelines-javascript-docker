@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: alexantopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: alexantopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alexantopipelinesjavascriptdocker 
+          image: mycontainerregistry2222.azurecr.io/alexantopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8090
